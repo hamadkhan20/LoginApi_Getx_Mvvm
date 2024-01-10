@@ -11,13 +11,8 @@ class UserPreference {
 
   Future<LoginResponseModel> getUser() async {
     SharedPreferences sp = await SharedPreferences.getInstance();
-    String? token = sp.getString(
-      'token',
-    );
-
-    bool? isLogin = sp.getBool(
-      'isLogin',
-    );
+    String? token = sp.getString('token');
+    bool? isLogin = sp.getBool('isLogin');
     return LoginResponseModel(
       token: token,
       isLogin: isLogin,
